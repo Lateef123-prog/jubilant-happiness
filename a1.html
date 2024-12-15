@@ -1,0 +1,30 @@
+<html>
+    <h2>JavaScript Class Inheritance</h2>
+    <p id="details"></p>
+    <p id="greetings"></p>
+    <script>
+        class stduent{
+            constructor(name){
+                this.studentname = name;
+            }
+            static hello(){
+                return "Hello";
+            }
+            present(){
+                return 'My name is ' +this.studentname;
+            }
+        }
+        class Grade extends stduent {
+            constructor (name,grade){
+                super(name);
+                this.stduentGrade = grade;
+            }
+            show(){
+                return this.present() + ', from ' + this.stduentGrade;
+            }
+        }
+        let myStudent = new Grade ("Tina","grade 6");
+        document.getElementById("details").innerHTML =myStudent.show();
+        document.getElementById("greetings").innerHTML= Student.hello();
+    </script>
+</html>
